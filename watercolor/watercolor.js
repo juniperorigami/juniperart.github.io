@@ -5,7 +5,6 @@
     let mainImg
     let thumbnails
     let galleryContainer
-    let displaySwitch
     let currIndex = 0
     let galleryDisplay = 0
     let modelParam
@@ -130,20 +129,6 @@
 
     function populateGallery() {
         galleryContainer.classList.add('gallery-container')
-
-        displaySwitch = document.createElement('div')
-        displaySwitch.classList.add('gallerySwitch')
-        if (galleryDisplay) {
-            galleryContainer.classList.add('cp')
-        } else {
-            galleryContainer.classList.remove('cp')
-        }
-        displaySwitch.addEventListener('click', switchGalleryDisplay)
-        displaySwitch.innerHTML = `
-            <div class="switch">Models</div>
-            <div class="switch">Crease Patterns</div>
-        `
-        galleryContainer.appendChild(displaySwitch)
 
         formattedWatercolorObject.forEach((x, i) => {
             const galleryImage = document.createElement('div')

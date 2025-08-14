@@ -3,7 +3,6 @@ const watercolorObject = [
         name: 'Penguin',
         images: [
             '1',
-            '2',
         ],
     },
 
